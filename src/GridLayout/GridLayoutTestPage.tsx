@@ -10,15 +10,15 @@ const GridLayoutTestPage = () => {
   ];
 
   return (
-    <>
+    <Container>
       <Wrapper>
-        <HeadCell>xxx1</HeadCell>
-        <HeadCell>xxx2</HeadCell>
-        <HeadCell>32</HeadCell>
-        <HeadCell>BBBB</HeadCell>
-        <HeadCell>fff</HeadCell>
-        <HeadCell>234</HeadCell>
-        <HeadCell>234</HeadCell>
+        <div>xxx1</div>
+        <div>xxx2</div>
+        <div>32</div>
+        <div>BBBB</div>
+        <div>fff</div>
+        <div>234</div>
+        <div>234</div>
       </Wrapper>
       <Wrapper>
         <Box1>aiueo</Box1>
@@ -47,11 +47,44 @@ const GridLayoutTestPage = () => {
         <div>fff</div>
         <div>234</div>
       </Wrapper>
-    </>
+      <Wrapper>
+        <Box1>aiueo</Box1>
+        <div>AAAAAAAAA</div>
+        <div>kkk</div>
+        <div>32</div>
+        <div>BBBB</div>
+        <div>fff</div>
+        <div>234</div>
+        <div>AAAA</div>
+        <div>kkk</div>
+        <div>32</div>
+        <div>BBBB</div>
+        <div>fff</div>
+        <div>234</div>
+        <div>AAAA</div>
+        <div>kkk</div>
+        <div>32</div>
+        <div>BBBB</div>
+        <div>fff</div>
+        <div>234</div>
+        <div>AAAA</div>
+        <div>kkk</div>
+        <div>32</div>
+        <div>BBBB</div>
+        <div>fff</div>
+        <div>234</div>
+      </Wrapper>
+    </Container>
   );
 };
 
 export default GridLayoutTestPage;
+
+const Container = styled.div`
+  div:first-child > div {
+    background: #f00;
+  }
+`;
 
 const templateColumns = "60px 60px 60px 60px 60px 60px 60px";
 
@@ -68,7 +101,11 @@ const Wrapper = styled.div`
   color: #000;
   box-sizing: border-box;
 
+  border: 0px solid #999;
+
   > div {
+    box-sizing: border-box;
+
     border: 1px solid #999;
     word-wrap: break-word;
   }
